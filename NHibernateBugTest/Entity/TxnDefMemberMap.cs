@@ -15,7 +15,6 @@ namespace NHibernateBugTest.Entity
     {
         public TxnDefMemberMap()
         {
-            Schema("OCN_TRASH");
             Table("TXN_DEF_MEMBER");
 
             CompositeId(x => x.Id).KeyProperty(y => y.TxnDefGuid, "TXN_DEF_GUID")

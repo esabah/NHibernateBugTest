@@ -13,7 +13,6 @@ namespace NHibernateBugTest.Entity
     {
         public TxnDefMap()
         {
-            Schema("OCN_TRASH");
             Table("TXN_DEF_1");
             Id(x => x.Guid).Column("GUID").GeneratedBy.Sequence("DefaultSequence");
             Map(x => x.Description).Column("DESCRIPTION").Length(4000);
