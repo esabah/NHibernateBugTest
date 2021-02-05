@@ -79,7 +79,7 @@ namespace NHibernateBugTest
 
 
 
-                var query = session.CreateQuery($@"update {typeof(CustomerMap)} 
+                var query = session.CreateQuery($@"update {typeof(Customer)} 
                                                        set Name= 'test'
                                                        where Guid = 100");
                 query.ExecuteUpdate();
