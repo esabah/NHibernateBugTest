@@ -11,6 +11,8 @@ namespace NHibernateBugTest.Entity
             Id(x => x.UserCode).Column("USER_CODE").GeneratedBy.Assigned();
             Map(x => x.UserName).Column("USER_NAME").Not.Nullable().Length(50);
             Map(x => x.IsOpen).Column("IS_OPEN").CustomType<SqlBoolean>().Precision(8);
+
+            Cache.NonStrictReadWrite();
         }
     }
 }
